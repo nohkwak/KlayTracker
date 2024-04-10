@@ -7,7 +7,7 @@ Our goal is to create a monitoring service for our client's cryptocurrency using
 ### Frontend
 - UI
 - Logic
-_ iOS and Browser compatibility
+- iOS and Browser compatibility
 - HTML, CSS, JS
 - Live tracking 
 
