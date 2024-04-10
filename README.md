@@ -15,3 +15,8 @@ Our goal is to create a monitoring service for our client's cryptocurrency using
 - Python based Web Server
 - Blockchain data retrieval and update
 
+
+## How to run
+'''
+$ flask --app flaskr run --debug
+'''
