@@ -21,6 +21,7 @@ Our goal is to create a monitoring service for our client's cryptocurrency using
 python3 -m venv .venv
 . .venv/bin/activate
 python3 -m pip install Flask
+python3 -m pip install web3py-ext
 ```
 
 ## How to run

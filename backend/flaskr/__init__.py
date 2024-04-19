@@ -1,6 +1,11 @@
 import os
+# from web3py_ext import extend
+# from web3 import AsyncWeb3, AsyncHTTPProvider
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from web3 import Web3
+import json
+
 
 
 def create_app(test_config=None):
@@ -34,10 +39,23 @@ def create_app(test_config=None):
     
 
     @app.route('/test')
-    def calculate():
-        KlaytnBalance = "testing"
-        value = 0
-        return {"KlaytnBalance":KlaytnBalance, 
-                "KlaytnValue":value}
+    def retrieve():
+        klaytnBalance = "testing"
+        balance = 0
+        privateKey = "0xf0b695328ee59cec0bbf2f2efd309423c8e1cb427f82ac0ea3552d30c63f6f68"
+        address = Web3.to_checksum_address("0x7cd2bb56142bf8ab104c8c1eddef9b1c32b04979")
+
+        # w3 = AsyncWeb3(AsyncWeb3.AsyncHTTPProvider('https://public-en-baobab.klaytn.net', request_kwargs={'ssl':False}))
+        w3 = Web3(Web3.HTTPProvider('https://public-en-baobab.klaytn.net'))
+
+        try:
+            result = w3.eth.get_balance(address)
+            print(result)
+            balance = result / 1000000000000000000
+        except Exception as e:
+            print(f"Error: {e}")
+
+        return {"address":address, "balance": balance}
+        
 
     return app
