@@ -31,5 +31,13 @@ def create_app(test_config=None):
     @app.route('/')
     def hello():
         return render_template("test.html")
+    
+
+    @app.route('/test')
+    def calculate():
+        KlaytnBalance = "testing"
+        value = 0
+        return {"KlaytnBalance":KlaytnBalance, 
+                "KlaytnValue":value}
 
     return app

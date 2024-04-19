@@ -6,9 +6,23 @@
             Hello World!
         </title>
     </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $.getJSON( "http://127.0.0.1:5000/test", function( data ) {
+            var items = [];
 
+            $.each( data, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + key + ":" + val + "</li>" );
+            });
 
+            $( "<ul/>", {
+                html: items.join( "" )
+            }).appendTo( "body" );
+        });
+    </script> 
     <body>
         <p>Hello again!</p>
+        
     </body>
 </html>
+
