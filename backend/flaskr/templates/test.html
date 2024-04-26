@@ -26,23 +26,25 @@
     </head>
 
     <body>
-        <header class="navbar sticky-top shadow" style="background-color:darkblue; color:white;">
+        <header class="navbar sticky-top shadow" style="background-color:green; color:white; border-left:darkgreen; border-width: 10px;border-left-style:solid; border-bottom-right-radius: 25px;">
 
             <div class="col-1" style="text-align:center">[Logo]</div>
-            <div class="col-4">
-                <h1 style="padding:1%"><b>  KlaytnTracker</b></h1>
-                <label align="center" style="text-align:left;padding-bottom:2%;">  by G32</label>
+            <div class="col-2">
+                <h1 style="border-bottom-width:5px; border-bottom-style: solid; border-bottom-color: darkgreen;" align="left"><b> KlaytnTracker</b></h1>
             </div>
 
+            <div class="col-1">
+                <h8 align="left" style="text-align:left;padding-top: 0;">  by G32</h8>
+            </div>
             <div class="col"></div>
         </header>
 
         <div style="padding:2%;">
         <h2>Dashboard</h2>
 
-        <div class="card shadow">
-            <div class="card-head">
-                <h6>Graph</h6>
+        <div class="card shadow" style="padding:3%;">
+            <div class="card-head" style="border-bottom-style: solid;border-bottom-width:3px; border-bottom-color: green;">
+                <h3>Track Values</h3>
             </div>
             <div class="card-body">
                 <div>
@@ -64,7 +66,7 @@
                             data: {
                             labels: ['1', '2', '3', '4', '5', '6'],
                             datasets: [{
-                                label: '# of Votes',
+                                label: 'Value of Klay',
                                 data: values,
                                 borderWidth: 1
                             }]
