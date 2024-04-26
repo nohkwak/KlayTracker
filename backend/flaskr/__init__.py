@@ -56,6 +56,11 @@ def create_app(test_config=None):
             print(f"Error: {e}")
 
         return {"address":address, "balance": balance}
-        
+
+    @app.route('/test2')
+    def fetch():
+        # read database
+        return {"1":30, "2": 40, "3":50, "4": 60, "5":70, "6": 80}
+
 
     return app

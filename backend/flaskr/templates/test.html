@@ -40,6 +40,48 @@
         <div style="padding:2%;">
         <h2>Dashboard</h2>
 
+        <div class="card shadow">
+            <div class="card-head">
+                <h6>Graph</h6>
+            </div>
+            <div class="card-body">
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    $.getJSON( "http://127.0.0.1:5000/test2", function( data ) {
+                        const ctx = document.getElementById('myChart');
+                        const values = [];
+
+                        $.each( data, function( key, val ) {
+                            values.push( val );
+                        });
+
+                        new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                            labels: ['1', '2', '3', '4', '5', '6'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: values,
+                                borderWidth: 1
+                            }]
+                            },
+                            options: {
+                            scales: {
+                                y: {
+                                beginAtZero: true
+                                }
+                            }
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
     </body>
 </html>
 
