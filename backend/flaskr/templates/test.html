@@ -51,57 +51,59 @@
         <div>
         <h2 style="padding: 1%;">Dashboard</h2>
 
-        <div class="card shadow rounded-4 border-primary col-4"style="margin: 1%;padding: 1%;">
-            <div class="card-head rounded-top border-muted border-width-1%" style="padding-left: 0.5%;padding-top: 0.5%">
-                <h4>Track Values</h4>
-            </div>
-            <div class="card-body">
-                <div>
-                    <canvas id="myChart"></canvas>
+        <div class="row">
+            <div class="card shadow rounded-4 border-primary col-5"style="margin: 1%;padding: 1%;margin-right:2%">
+                <div class="card-head rounded-top border-muted border-width-1%" style="padding-left: 0.5%;padding-top: 0.5%">
+                    <h4>Track Values</h4>
                 </div>
+                <div class="card-body">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                <script>
-                    $.getJSON( "http://127.0.0.1:5000/test2", function( data ) {
-                        const ctx = document.getElementById('myChart');
-                        const values = [];
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                        $.getJSON( "http://127.0.0.1:5000/test2", function( data ) {
+                            const ctx = document.getElementById('myChart');
+                            const values = [];
 
-                        $.each( data, function( key, val ) {
-                            values.push( val );
-                        });
+                            $.each( data, function( key, val ) {
+                                values.push( val );
+                            });
 
-                        new Chart(ctx, {
-                            type: 'line',
-                            
-                            data: {
-                            labels: ['1', '2', '3', '4', '5', '6'],
-                            
-                            datasets: [{
-                                label: 'Value of Klay',
-                                data: values,
-                                borderWidth: 2,
-                                borderColor: "blue"
-                            }]
-                            },
-                            options: {
-                            scales: {
-                                y: {
-                                beginAtZero: true
+                            new Chart(ctx, {
+                                type: 'line',
+                                
+                                data: {
+                                labels: ['1', '2', '3', '4', '5', '6'],
+                                
+                                datasets: [{
+                                    label: 'Value of Klay',
+                                    data: values,
+                                    borderWidth: 2,
+                                    borderColor: "blue"
+                                }]
+                                },
+                                options: {
+                                scales: {
+                                    y: {
+                                    beginAtZero: true
+                                    }
                                 }
-                            }
-                            }
+                                }
+                            });
                         });
-                    });
-                </script>
+                    </script>
+                </div>
+            </div>
+
+
+            <div class="card col-sm" style="margin: 1%;padding: 1%;">
+                <h3>A Placeholder Title</h3>
+                Duis hendrerit est a ante pharetra, sed euismod ante mattis. Aliquam lacus nunc, commodo sed posuere a, congue ut est. Aenean cursus lacus lectus, id blandit dolor lobortis id. Donec a auctor diam. Nullam rutrum at elit maximus fringilla. Sed eget scelerisque odio, non rutrum purus. Proin ac finibus risus. Quisque fermentum fringilla eros, a malesuada massa sodales eu. Nulla ante quam, vulputate vitae lectus id, faucibus venenatis felis. Ut in porttitor turpis. Praesent ultrices risus in magna maximus, vel commodo arcu auctor.
+
             </div>
         </div>
-
-        <block></block>
-
-        <div class="card ">Duis hendrerit est a ante pharetra, sed euismod ante mattis. Aliquam lacus nunc, commodo sed posuere a, congue ut est. Aenean cursus lacus lectus, id blandit dolor lobortis id. Donec a auctor diam. Nullam rutrum at elit maximus fringilla. Sed eget scelerisque odio, non rutrum purus. Proin ac finibus risus. Quisque fermentum fringilla eros, a malesuada massa sodales eu. Nulla ante quam, vulputate vitae lectus id, faucibus venenatis felis. Ut in porttitor turpis. Praesent ultrices risus in magna maximus, vel commodo arcu auctor.
-
-        </div>
-
 
 
     </body>
