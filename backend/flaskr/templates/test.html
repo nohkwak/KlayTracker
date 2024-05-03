@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <html>
     <head>
@@ -26,25 +27,30 @@
     </head>
 
     <body>
-        <header class="navbar sticky-top shadow" style="background-color:green; color:white; border-left:darkgreen; border-width: 10px;border-left-style:solid; border-bottom-right-radius: 25px;">
-
-            <div class="col-1" style="text-align:center">[Logo]</div>
-            <div class="col-2">
-                <h1 style="border-bottom-width:5px; border-bottom-style: solid; border-bottom-color: darkgreen;" align="left"><b> KlaytnTracker</b></h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary rounded-bottom" style="padding: 1%;">
+            <a class="navbar-brand text-white" href="#">
+                <span class="text-dark"><strong>{</strong></span>
+                <strong>Klay</strong>
+                <span class="text-dark"><strong>}</strong>Tracker</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link text-light" href="#">Balance</a>
+                    <a class="nav-item nav-link text-light" href="#">Services</a>
+                </div>
             </div>
-
-            <div class="col-1">
-                <h8 align="left" style="text-align:left;padding-top: 0;">  by G32</h8>
-            </div>
-            <div class="col"></div>
-        </header>
-
-        <div style="padding:2%;">
+        </nav>
+        <div>
         <h2>Dashboard</h2>
 
-        <div class="card shadow" style="padding:3%;">
-            <div class="card-head" style="border-bottom-style: solid;border-bottom-width:3px; border-bottom-color: green;">
-                <h3>Track Values</h3>
+
+        <div class="card shadow rounded-4 border-primary col-4">
+            <div class="card-head rounded-top border-muted border-width-1%" style="padding-left: 0.5%;padding-top: 0.5%">
+                <h4>Track Values</h4>
             </div>
             <div class="card-body">
                 <div>
@@ -63,12 +69,15 @@
 
                         new Chart(ctx, {
                             type: 'line',
+                            
                             data: {
                             labels: ['1', '2', '3', '4', '5', '6'],
+                            
                             datasets: [{
                                 label: 'Value of Klay',
                                 data: values,
-                                borderWidth: 1
+                                borderWidth: 2,
+                                borderColor: "blue"
                             }]
                             },
                             options: {
@@ -83,6 +92,14 @@
                 </script>
             </div>
         </div>
+
+        <block></block>
+
+        <div class="card ">Duis hendrerit est a ante pharetra, sed euismod ante mattis. Aliquam lacus nunc, commodo sed posuere a, congue ut est. Aenean cursus lacus lectus, id blandit dolor lobortis id. Donec a auctor diam. Nullam rutrum at elit maximus fringilla. Sed eget scelerisque odio, non rutrum purus. Proin ac finibus risus. Quisque fermentum fringilla eros, a malesuada massa sodales eu. Nulla ante quam, vulputate vitae lectus id, faucibus venenatis felis. Ut in porttitor turpis. Praesent ultrices risus in magna maximus, vel commodo arcu auctor.
+
+        </div>
+
+
 
     </body>
 </html>
