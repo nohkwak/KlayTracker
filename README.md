@@ -43,7 +43,7 @@ docker exec -it db-mysql bash
 ```
 
 ## External References: 
-- [flask quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
+- ![flask quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ## ERD
 - ![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/doc/ERD%20KlayTracker.png)
