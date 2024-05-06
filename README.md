@@ -25,20 +25,25 @@ python3 -m pip install Flask
 python3 -m pip install web3py-ext
 ```
 ### Database
-[Refer to mariadb install using docker]https://mariadb.com/kb/en/installing-and-using-mariadb-via-docker/
-```
-cd database
-./docker_launch.sh
-```
+[Refer to mysql install using docker]https://mariadb.com/kb/en/installing-and-using-mariadb-via-docker/
+
 
 
 
 ## How to run
+### Backend
 ```
 $ flask --app flaskr run --debug
 ```
+### Database
+```
+cd database
+docker-compose up -d
+docer exec -it db-mysql
+```
+
 ## External References: 
 - [flask quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ## ERD
-![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/doc/ERD%20KlayTracker.png)
+- ![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/doc/ERD%20KlayTracker.png)
