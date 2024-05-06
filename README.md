@@ -32,4 +32,4 @@ $ flask --app flaskr run --debug
 - [flask quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ## ERD
-![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/images/ERD%20KlayTracker.png)
+![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/doc/ERD%20KlayTracker.png)
