@@ -39,7 +39,7 @@ $ flask --app flaskr run --debug
 ```
 cd database
 docker-compose up -d
-docer exec -it db-mysql
+docker exec -it db-mysql bash
 ```
 
 ## External References: 
