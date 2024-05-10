@@ -10,7 +10,7 @@ import {
   Transfer as TransferEvent,
   Pause as PauseEvent,
   Unpause as UnpauseEvent
-} from "../generated/USDT/USDT"
+} from "../generated/Contract/Contract"
 import {
   Issue,
   Redeem,

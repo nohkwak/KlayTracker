@@ -5,11 +5,11 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: USDT
+    name: Contract
     network: mainnet
     source:
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-      abi: USDT
+      abi: Contract
       startBlock: 4634748
     mapping:
       kind: ethereum/events
@@ -28,8 +28,8 @@ dataSources:
         - Pause
         - Unpause
       abis:
-        - name: USDT
-          file: ./abis/USDT.json
+        - name: Contract
+          file: ./abis/Contract.json
       eventHandlers:
         - event: Issue(uint256)
           handler: handleIssue
@@ -53,4 +53,4 @@ dataSources:
           handler: handlePause
         - event: Unpause()
           handler: handleUnpause
-      file: ./src/usdt.ts
+      file: ./src/contract.ts

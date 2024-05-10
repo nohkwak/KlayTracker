@@ -12,7 +12,7 @@ import {
   Transfer,
   Pause,
   Unpause
-} from "../generated/USDT/USDT"
+} from "../generated/Contract/Contract"
 
 export function createIssueEvent(amount: BigInt): Issue {
   let issueEvent = changetype<Issue>(newMockEvent())
