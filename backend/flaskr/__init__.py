@@ -4,10 +4,6 @@ import os
 
 from flask import Flask, render_template, request
 from web3 import Web3
-
-from gql import gql, Client
-from gql.transport.aiohttp import AIOHTTPTransport
-
 import json
 
 
@@ -66,37 +62,5 @@ def create_app(test_config=None):
         # read database
         return {"1":30, "2": 40, "3":20, "4": 60, "5":70, "6": 50}
 
-    @app.route('/testSubquery')
-    def testquery():
-        # Define transport and url endpoint
-        transport = AIOHTTPTransport(url="https://api.studio.thegraph.com/query/74689/klaytrackertest/v0.1")
 
-        # Create a GraphQL client using the defined transport
-        client = Client(transport=transport, fetch_schema_from_transport=True)
-
-        # Provide a GraphQL query
-        query = gql(
-            """
-                {
-                    issues(first: 5) {
-                        id
-                        amount
-                        blockNumber
-                        blockTimestamp
-                    }
-                    redeems(first: 5) {
-                        id
-                        amount
-                        blockNumber
-                        blockTimestamp
-                    }
-                }
-            """
-        )
-
-        # Execute the query on the transport
-        result = client.execute(query)
-        print(result)
-
-        return result
     return app

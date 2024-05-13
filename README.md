@@ -23,7 +23,6 @@ python3 -m venv .venv
 . .venv/bin/activate
 python3 -m pip install Flask
 python3 -m pip install web3py-ext
-python3 -m pip install "gql[all]"
 ```
 ### Database
 - [Refer to mysql install using docker](https://mariadb.com/kb/en/installing-and-using-mariadb-via-docker/)
@@ -45,7 +44,6 @@ docker exec -it db-mysql bash
 
 ## External References: 
 - [flask quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
-- Made using [The Graph](https://thegraph.com/en/)
 
 ## ERD
 - ![KlayTracker intial ER diagram](https://github.com/nohkwak/KlayTracker/blob/main/doc/ERD%20KlayTracker.png)
